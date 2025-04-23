@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import NavBar from "@/components/NavBar";
+import HeroBanner from "@/components/HeroBanner";
+import TeaCategories from "@/components/TeaCategories";
+import PopularTeas from "@/components/PopularTeas";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      <main>
+        <HeroBanner />
+        <TeaCategories />
+        <PopularTeas />
+      </main>
+      <footer className="mt-auto py-6 border-t">
+        <div className="container">
+          <div className="flex justify-between items-center">
+            <p className="text-sm text-muted-foreground">
+              © 2023 ЧайМир. Все права защищены.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Исследуйте мир чая с нами
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
